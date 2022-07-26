@@ -29,7 +29,7 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    const String _title = "TallyAssist";
+    const String _title = "tallyassist";
 
     return MultiProvider(providers: [
       StreamProvider<FirebaseUser>.value(

@@ -188,7 +188,7 @@ AppBar headerNavOther(GlobalKey<ScaffoldState> _drawerkey,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const Text(
-                'TallyAssist',
+                'tallyassist',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,

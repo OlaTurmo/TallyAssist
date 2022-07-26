@@ -136,7 +136,7 @@ class _WelcomeScreen2State extends State<WelcomeScreen2> {
                             ),
                             SizedBox(height: 15.0),
                             Text(
-                              'Select from parties & products from Tally to create new invoices from TallyAssist.',
+                              'Select from parties & products from Tally to create new invoices from tallyassist.',
                               style: secondaryListDisc.copyWith(
                                   color: TassistWhite),
                             ),
@@ -274,7 +274,7 @@ class _WelcomeScreen2State extends State<WelcomeScreen2> {
 //                   crossAxisAlignment: CrossAxisAlignment.center,
 //                   children: <Widget>[
 //                      Text(
-//                   'Welcome to TallyAssist!',
+//                   'Welcome to tallyassist!',
 //                   style: Theme.of(context)
 //                   .textTheme
 //                   .headline6

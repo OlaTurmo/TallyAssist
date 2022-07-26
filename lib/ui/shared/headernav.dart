@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -6,12 +5,11 @@ import 'package:tassist/theme/colors.dart';
 import 'package:tassist/theme/theme.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-AppBar headerNav(GlobalKey<ScaffoldState> _drawerkey ) {
+AppBar headerNav(GlobalKey<ScaffoldState> _drawerkey) {
 // headerNav(_drawerkey);
 
 // GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
   bool enabled = true;
-   
 
   return AppBar(
       leading: Padding(
@@ -36,10 +34,10 @@ AppBar headerNav(GlobalKey<ScaffoldState> _drawerkey ) {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-               Container(
+              Container(
                 //  width: MediaQuery.of(context).size.width /2,
-                 child: Text(
-                  'TallyAssist',
+                child: Text(
+                  'tallyassist',
                   overflow: TextOverflow.ellipsis,
                   maxLines: 1,
                   style: TextStyle(
@@ -47,8 +45,8 @@ AppBar headerNav(GlobalKey<ScaffoldState> _drawerkey ) {
                     fontWeight: FontWeight.normal,
                     letterSpacing: 1.0,
                   ),
+                ),
               ),
-               ),
               Text(
                 'Beta',
                 style: TextStyle(
@@ -57,21 +55,21 @@ AppBar headerNav(GlobalKey<ScaffoldState> _drawerkey ) {
                   letterSpacing: 1.0,
                 ),
               ),
-          ],
-        ),
-        Spacer(),
-        Text('Help?', style: TextStyle(fontSize: 14.0, letterSpacing: 1.0),),
-        IconButton(
-        icon: Icon(FontAwesomeIcons.whatsapp),
-        onPressed: () => _launchURL()
-            )
-        // DropDownMonths(),
-      ],
-    ),
-    backgroundColor: TassistMenuBg
-  );
+            ],
+          ),
+          Spacer(),
+          Text(
+            'Help?',
+            style: TextStyle(fontSize: 14.0, letterSpacing: 1.0),
+          ),
+          IconButton(
+              icon: Icon(FontAwesomeIcons.whatsapp),
+              onPressed: () => _launchURL())
+          // DropDownMonths(),
+        ],
+      ),
+      backgroundColor: TassistMenuBg);
 }
-
 
 _launchURL() async {
   const url = '';
@@ -81,9 +79,6 @@ _launchURL() async {
     throw 'Could not launch $url';
   }
 }
-
-
-
 
 class DropDownMonths extends StatefulWidget {
   @override

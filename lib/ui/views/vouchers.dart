@@ -65,7 +65,8 @@ class _VouchersHomeState extends State<VouchersHome>
                       children: <Widget>[
                         Text(
                           "Limit: last 2000 vouchers",
-                          style: secondaryListDisc.copyWith(color: TassistInfoGrey),
+                          style: secondaryListDisc.copyWith(
+                              color: TassistInfoGrey),
                         ),
                       ],
                     ),
@@ -176,7 +177,7 @@ AppBar headerNavOther(GlobalKey<ScaffoldState> _drawerkey)
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const Text(
-                'TallyAssist',
+                'tallyassist',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,

@@ -53,7 +53,7 @@ createInvoicePdf({
             decoration: const BoxDecoration(
                 border:
                     BoxBorder(bottom: true, width: 0.5, color: PdfColors.grey)),
-            child: Text('TallyAssist',
+            child: Text('tallyassist',
                 style: Theme.of(context)
                     .defaultTextStyle
                     .copyWith(color: PdfColors.grey)));
@@ -64,7 +64,7 @@ createInvoicePdf({
           child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Text('Generated using TallyAssist',
+                Text('Generated using tallyassist',
                     style: TextStyle(
                         color: PdfColors.purple400, font: Font.timesItalic())),
                 Text('Page ${context.pageNumber} of ${context.pagesCount}',

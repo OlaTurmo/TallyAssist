@@ -36,7 +36,7 @@ class _LedgerInputScreenState extends State<LedgerInputScreen> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   String _invoiceNumber = Random().nextInt(1000).toString();
-  String _masterId = Random().nextInt(1000  ).toString();
+  String _masterId = Random().nextInt(1000).toString();
   // Customer details
   LedgerItem _customerLedger;
   String _customerName = '';
@@ -322,28 +322,32 @@ class _LedgerInputScreenState extends State<LedgerInputScreen> {
                           isExpanded: true,
                           items: <DropdownMenuItem>[
                             DropdownMenuItem(
-                              child: Text('IGST', style: secondaryListDisc.copyWith(fontSize: 12)),
+                              child: Text('IGST',
+                                  style:
+                                      secondaryListDisc.copyWith(fontSize: 12)),
                               value: 'igst',
                             ),
                             DropdownMenuItem(
-                              child:
-                                  Text('CGST & SGST', style: secondaryListDisc.copyWith(fontSize: 12)),
+                              child: Text('CGST & SGST',
+                                  style:
+                                      secondaryListDisc.copyWith(fontSize: 12)),
                               value: 'cgst & sgst',
                             ),
                           ],
                           // value: 'igst',
-                          decoration: InputDecoration( 
+                          decoration: InputDecoration(
                               isDense: true,
                               enabledBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white),
-                                ),
+                                borderSide: BorderSide(color: Colors.white),
+                              ),
                               labelText: 'GST Type',
                               // AT: This should be a dropdown
-                              labelStyle: secondaryListDisc.copyWith(fontSize: 14)),
+                              labelStyle:
+                                  secondaryListDisc.copyWith(fontSize: 14)),
                           onChanged: (val) => setState(() => _gstType = val),
                         ),
                       ),
-                          SizedBox(width: 10),
+                      SizedBox(width: 10),
                       Flexible(
                         flex: 1,
                         child: new TextFormField(
@@ -352,7 +356,8 @@ class _LedgerInputScreenState extends State<LedgerInputScreen> {
                           decoration: InputDecoration(
                               labelText: 'GST %',
                               // AT: This should be a dropdown
-                              labelStyle: secondaryListDisc.copyWith(fontSize: 14)),
+                              labelStyle:
+                                  secondaryListDisc.copyWith(fontSize: 14)),
                           onChanged: (val) =>
                               setState(() => _gstPercentage = val),
                         ),
@@ -444,7 +449,7 @@ class _LedgerInputScreenState extends State<LedgerInputScreen> {
                                 _productName,
                                 'HSN Code: ',
                                 '$_productQuantity Qty @ $_productPrice/item',
-                                'CGST & SGST @ ${double.parse(_gstPercentage) / 2 } % : $gstAmount',
+                                'CGST & SGST @ ${double.parse(_gstPercentage) / 2} % : $gstAmount',
                                 'Amount: $amount',
                                 'Discount: ',
                               ];
@@ -557,7 +562,8 @@ class _LedgerInputScreenState extends State<LedgerInputScreen> {
                         child: Column(
                           children: <Widget>[
                             Text('Total: $_totalAmount',
-                                style: secondaryListTitle.copyWith(fontSize: 18)),
+                                style:
+                                    secondaryListTitle.copyWith(fontSize: 18)),
                             Text(
                               'Tax: $_totalTax',
                               style: secondaryListTitle2,
@@ -601,7 +607,9 @@ class _LedgerInputScreenState extends State<LedgerInputScreen> {
                           logoPath: logoPath,
                         );
                       },
-                      child: Text('Preview', style: TextStyle(fontSize: 20, fontFamily: 'Proxima-Nova')),
+                      child: Text('Preview',
+                          style: TextStyle(
+                              fontSize: 20, fontFamily: 'Proxima-Nova')),
                       color: TassistInfoGrey,
                       textColor: Colors.white,
                       elevation: 5,
@@ -668,7 +676,9 @@ class _LedgerInputScreenState extends State<LedgerInputScreen> {
                           logoPath: logoPath,
                         );
                       },
-                      child: Text('Send', style: TextStyle(fontSize: 20, fontFamily: 'Proxima-Nova`')),
+                      child: Text('Send',
+                          style: TextStyle(
+                              fontSize: 20, fontFamily: 'Proxima-Nova`')),
                       color: TassistPrimary,
                       textColor: Colors.white,
                       elevation: 5,
@@ -734,7 +744,7 @@ viewPdf(
           },
           '*/*',
           text:
-              'Please find $invoiceNumber worth $totalAmount from $company. It was great doing business with you! - shared via TallyAssist');
+              'Please find $invoiceNumber worth $totalAmount from $company. It was great doing business with you! - shared via tallyassist');
     } catch (e) {
       print('error: $e');
     }

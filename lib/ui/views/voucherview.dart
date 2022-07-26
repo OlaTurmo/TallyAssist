@@ -92,11 +92,12 @@ class VoucherView extends StatelessWidget {
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: <Widget>[
-                            Row(children: <Widget>[
-                              Text('Voucher #'),
-                            Text(voucher.number),
-                            ],),
-                            
+                            Row(
+                              children: <Widget>[
+                                Text('Voucher #'),
+                                Text(voucher.number),
+                              ],
+                            ),
                             Visibility(
                               visible: voucher.primaryVoucherType == "Sales",
                               child: InvoiceButton(
@@ -200,14 +201,13 @@ class InvoiceButton extends StatelessWidget {
 
     return // PDF Sharing button
         RaisedButton(
-          color: TassistMenuBg,
-            child: Row(children: <Widget>[
-              Text('Send PDF  ', style: TextStyle(color: TassistWhite)),
-              Icon(Icons.picture_as_pdf, color: TassistWhite),
-
-            ],),
-            
-            
+            color: TassistMenuBg,
+            child: Row(
+              children: <Widget>[
+                Text('Send PDF  ', style: TextStyle(color: TassistWhite)),
+                Icon(Icons.picture_as_pdf, color: TassistWhite),
+              ],
+            ),
             onPressed: () async {
               String logoPath;
               if (company.hasLogo == '1') {
@@ -381,8 +381,7 @@ _createInvoiceItemList(voucher, inventoryEntries) {
     itemList.add(["", "Tax", "", "", "", "", taxAmount]);
   }
 
-  itemList
-      .add(["", "Total", "", "", "", "", voucher.amount.toString()]);
+  itemList.add(["", "Total", "", "", "", "", voucher.amount.toString()]);
 
   return itemList;
 }
@@ -487,7 +486,7 @@ AppBar headerNavOtherVoucher(GlobalKey<ScaffoldState> _drawerkey,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               const Text(
-                'TallyAssist',
+                'tallyassist',
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.bold,
